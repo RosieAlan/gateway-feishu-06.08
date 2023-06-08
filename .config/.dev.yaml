@@ -1,0 +1,8 @@
+TEST_VALUE:
+  name: Rosiiie
+FEISHU_CONFIG:
+  FEISHU_URL: https://open.feishu.cn/open-apis
+  FEISHU_API_HOST: https://open.feishu.cn
+  FEISHU_APP_ID: cli_a4f430d1bd269013
+  FEISHU_APP_SECRET: d0TCKhpzo9F6FILYFxGYidUmyhd0hKFe
+APP_TOKEN_CACHE_KEY: APP_TOKEN_CACHE_KEY
