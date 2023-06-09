@@ -15,10 +15,11 @@ export class HttpExceptionFilter implements ExceptionFilter {
     const response = ctx.getResponse<FastifyReply>();
     const request = ctx.getRequest<FastifyRequest>();
     const status = exception.getStatus();
-
+    console.log('exception', exception);
     // 处理业务异常
     if (exception instanceof BusinessException) {
       const error = exception.getResponse();
+      console.log('error', error);
       response.status(HttpStatus.OK).send({
         data: null,
         status: error['code'],
@@ -28,12 +29,13 @@ export class HttpExceptionFilter implements ExceptionFilter {
       });
       return;
     }
-
+    
+    
     response.status(status).send({
       statusCode: status,
       timestamp: new Date().toISOString(),
       path: request.url,
-      message: exception.getResponse(),
+      message: '111',
     });
   }
 }
