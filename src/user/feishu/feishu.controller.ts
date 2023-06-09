@@ -15,6 +15,7 @@ export class FeishuController {
   @Post('sendMessage')
   sendMessage(@Body() params: FeishuMessageDto) {
     const { receive_id_type, ...rest } = params
+    console.log('receive_id_type', receive_id_type);
     return this.feishuService.sendMessage(receive_id_type, rest);
   }
 }

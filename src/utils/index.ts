@@ -4,8 +4,6 @@ const fs = require('fs');
 
 // 获取项目运行环境
 export const getEnv = () => {
-  console.log(process.env.RUNNING_ENV,'env');
-  
   return process.env.RUNNING_ENV
 }
 

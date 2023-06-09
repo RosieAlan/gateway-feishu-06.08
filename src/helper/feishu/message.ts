@@ -22,8 +22,6 @@ type MESSAGES_PARAMS = {
 }
 
 export const messages = async (receive_id_type: RECEIVE_TYPE, params: MESSAGES_PARAMS, app_token: string) => {
-//   console.log(receive_id_type, params, app_token)
-
   const { data } = await methodV({
     url: `/im/v1/messages`,
     method: 'POST',
@@ -33,6 +31,5 @@ export const messages = async (receive_id_type: RECEIVE_TYPE, params: MESSAGES_P
       Authorization: `Bearer ${app_token}`,
     },
   });
-  console.log('1111111111111111111111', data);
   return data;
 };

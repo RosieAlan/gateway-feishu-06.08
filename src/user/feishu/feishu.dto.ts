@@ -9,7 +9,7 @@ export class FeishuMessageDto {
   receive_id_type: RECEIVE_TYPE
 
   @IsNotEmpty()
-  @ApiProperty({ example: 'cookieboty@qq.com' })
+  @ApiProperty({ example: '516308181@qq.com' })
   receive_id?: string
 
   @IsNotEmpty()
