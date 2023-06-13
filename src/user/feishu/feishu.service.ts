@@ -32,7 +32,7 @@ export class FeishuService {
         this.cacheManager.set(
           this.APP_TOKEN_CACHE_KEY,
           appToken,
-          response.expire - 60,
+          (response.expire - 60)*1000,
         );
       } else {
         throw new BusinessException('飞书调用异常');
